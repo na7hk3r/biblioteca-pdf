@@ -23,7 +23,7 @@ const THUMBNAIL_DIRECTORY = path.join(__dirname, 'public', 'thumbnails');
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./pdf.worker.mjs', import.meta.url).href;
 
 // Añade esta línea para servir los archivos PDF
-app.use('/pdfs', express.static(path.join(__dirname, 'pdfs')));
+app.use('/pdfs', express.static(PDF_DIRECTORY));
 
 async function generateThumbnail(pdfPath, thumbnailPath) {
   const data = new Uint8Array(await fsPromises.readFile(pdfPath));
