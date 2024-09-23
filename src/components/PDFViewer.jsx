@@ -68,6 +68,9 @@ function PDFViewer() {
       canvas.height = viewport.height
       canvas.width = viewport.width
 
+      canvas.style.maxHeight = '80vh';
+      canvas.style.maxWidth = '80vw';
+
       // Cancelar cualquier tarea de renderizado anterior
       if (renderTaskRef.current) {
         renderTaskRef.current.cancel();
@@ -140,7 +143,9 @@ function PDFViewer() {
           Siguiente
         </button>
       </div>
-      <canvas ref={canvasRef} className="border-none z-0" />
+      <div className="flex justify-center items-center overflow-auto" style={{ maxHeight: '80vh', maxWidth: '80vw' }}>
+        <canvas ref={canvasRef} className="border-none z-0" />
+      </div>
       <div className="text-white mt-2 z-10">
         Página {pageNumber} de {numPages}
       </div>
