@@ -20,7 +20,7 @@ function PDFViewer() {
   useEffect(() => {
     if (!book && id) {
       // Si no tenemos la información del libro, la obtenemos del servidor
-      fetch(`http://localhost:3001/api/books/${id}`)
+      fetch(`/api/books/${id}`)
         .then(response => {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
