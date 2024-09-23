@@ -39,7 +39,7 @@ function PDFViewer() {
 
   useEffect(() => {
     if (book) {
-      const loadingTask = pdfjsLib.getDocument(`http://localhost:3001${book.path}`)
+      const loadingTask = pdfjsLib.getDocument(book.path)
       loadingTask.promise.then(pdf => {
         console.log('PDF loaded');
         setPdf(pdf)

@@ -7,7 +7,7 @@ function BookCard({ book, onClick }) {
       onClick={onClick}
     >
       <img 
-        src={`http://localhost:3001${book.cover}`} 
+        src={book.cover} 
         alt={`Portada de ${book.title}`} 
         className="w-full h-64 object-cover"
       />
