@@ -9,7 +9,7 @@ function App() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/books')
+    fetch('/api/books')
       .then(response => {
         if (!response.ok) {
           throw new Error('Error al cargar los libros')

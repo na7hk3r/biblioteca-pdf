@@ -79,7 +79,7 @@ app.get('/api/books', async (req, res) => {
         title: pdfInfo.Title || path.parse(file).name,
         author: pdfInfo.Author || 'Desconocido',
         cover: `/thumbnails/${path.parse(file).name}.png`,
-        path: `/pdfs/${file}`  // Asegúrate de que esto incluya '/pdfs/'
+        path: `/pdfs/${file}`
       };
     }));
 
