@@ -19,6 +19,10 @@
         "dest": "/server/index.mjs"
       },
       {
+        "src": "/pdfs/(.*)",
+        "dest": "/server/index.mjs"
+      },
+      {
         "src": "/(.*)",
         "dest": "/dist/index.html"
       }
